@@ -1,0 +1,62 @@
+
+/*
+Domanda + Riposta dell'admin
+in modo da riuscire a recuperare subito
+la risposta corretta
+*/
+CREATE TABLE question(
+id INT PRIMARY KEY auto_increment,
+admin_answer BOOLEAN NOT NULL,
+feedback int NOT NULL, /* 100 = Nessuno la sbaglia, 0 = Sono tutti delle capre ignoranti*/
+question VARCHAR(10000)
+);
+/*
+Il voto tramite il quale riusciamo a capire l'andamento
+generale e tramite il quale riusciamo a vedere se
+il metodo di esposizione/comunicazione è efficiente
+*/
+CREATE TABLE mark(
+id INT PRIMARY KEY auto_increment,
+mark DOUBLE NOT NULL
+);
+/*
+La tabella serve a gestire i vari utenti
+*/
+CREATE TABLE user(
+id INT PRIMARY KEY auto_increment,
+name VARCHAR(100) NOT NULL,
+surname VARCHAR(1000) NOT NULL
+);
+/*
+la tabella che unisce gli utenti ai voti
+in quanto come già detto in precedenza
+gli utenti svolgendo più test avranno 
+più risultati
+*/
+CREATE TABLE mark_user_(
+id_mark INT,
+id_user INT,
+FOREIGN KEY (id_mark) REFERENCES mark(id),
+FOREIGN KEY (id_user) REFERENCES user(id)
+);
+/*
+la tabella che contiene le risposte
+dell'utente al test
+*/
+CREATE TABLE user_answer(
+id INT PRIMARY KEY auto_increment,
+id_question INT,
+id_user INT,
+answer BOOLEAN NOT NULL,
+FOREIGN KEY (id_user) REFERENCES user(id)
+);
+
+/*
+Tabella segnalazioni 
+la quale contiene eventuali errori da segnalare
+*/
+
+CREATE TABLE warning(
+id INT PRIMARY KEY auto_increment, 
+VARCHAR(20000) /* */
+);

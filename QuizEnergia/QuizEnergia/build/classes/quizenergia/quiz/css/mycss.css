@@ -1,0 +1,12 @@
+.question {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-left: 6px solid black;
+    border-right: 6px solid black;
+    border-top : 1px solid black;
+    border-bottom : 1px solid black;
+    background-color: transparent;
+    border-radius: 15px;
+  }
