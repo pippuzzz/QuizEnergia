@@ -3,9 +3,6 @@
 <html lang="en">
 
 <head>
-    <?php
-    require_once("question.php");
-    ?>
     <meta charset="utf-8">
     <title>Gesù</title>
     <!-- Page Icon -->
@@ -13,7 +10,10 @@
 </head>
 
 <body>
-
+<?php
+        require_once("question.php");
+        echo("ciao");
+    ?>
 
     <!-- CSS References -->
     <link rel="stylesheet" href="css/mycss.css">

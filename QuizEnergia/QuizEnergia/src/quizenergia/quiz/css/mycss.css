@@ -10,3 +10,29 @@
     background-color: transparent;
     border-radius: 15px;
   }
+.arrow{
+  background-color: black;
+}
+.carousel-control-pre-icon,
+.carousel-control-nex-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+}
+
+.carousel-control-nex-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: black;
+}
+
+.carousel-control-pre-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: black;
+}
